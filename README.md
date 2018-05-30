@@ -1,6 +1,12 @@
 # Mockable #
 
-Mockable takes a bunch of functions in a file you specify and turns them into methods to a struct that implements an interface that's also created.
+Mockable helps you make your code mockable. You give it a bunch of functions, and it performs the following wonders.
+
+- It creates an interface containing those functions.
+- It creates a type to implement that interface.
+- It modifies your functions to be methods on that type.
+
+This allows you to replace calls to those functions with method calls on the interface. Your tests can then replace the interface implementation with a mock. Mockable also makes it easy to generate that mock with github.com/philpearl/ut.
 
 ## Parameters ##
 
